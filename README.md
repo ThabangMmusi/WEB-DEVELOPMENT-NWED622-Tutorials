@@ -5,7 +5,7 @@ This lesson covers how to create and add routing in ASP.NET Core MVC, focusing o
 
 ---
 
-## 1. Introduction & Recap (5 min)
+## 1. Introduction & Recap
 ### MVC Recap
 - **Model:** Handles data and business logic.
 - **View:** Responsible for the user interface.
@@ -17,7 +17,7 @@ This lesson covers how to create and add routing in ASP.NET Core MVC, focusing o
 
 ---
 
-## 2. Static Routing (10 min)
+## 2. Static Routing
 ### What is Static Routing?
 - Uses fixed URL patterns.
 - Example: `/Home/Index` always maps to the `Index` action of the `HomeController`.
@@ -32,7 +32,7 @@ app.MapControllerRoute(
 
 ---
 
-## 3. Dynamic Routing (15 min)
+## 3. Dynamic Routing
 ### What is Dynamic Routing?
 - Uses URL parameters to create flexible routes.
 - Example: `/Shoes/Sneaker/Red/1` maps to a specific shoe by type, color, and id.
@@ -54,7 +54,7 @@ public IActionResult Details(string type, string color, int id)
 
 ---
 
-## 4. Static vs Dynamic Routing (5 min)
+## 4. Static vs Dynamic Routing
 | Static Routing         | Dynamic Routing                |
 |-----------------------|-------------------------------|
 | Fixed URL patterns    | Flexible, parameterized URLs   |
@@ -63,14 +63,14 @@ public IActionResult Details(string type, string color, int id)
 
 ---
 
-## 5. Hands-On: Add Routing to a Product Feature (20 min)
+## 5. Hands-On: Add Routing to a Product Feature
 - Create a new controller and views for a product (e.g., Shoes).
 - Add both static and dynamic routes.
 - Test navigation and URL patterns in the browser.
 
 ---
 
-## 6. Q&A & Wrap-Up (5 min)
+## 6. Q&A & Wrap-Up
 - Review key concepts: MVC, routing, static vs dynamic.
 - Open floor for questions.
 
