@@ -39,8 +39,8 @@ namespace Routing.Controllers
         }
 
 
-        [Route("Shoes/{type}/{color}/{id}")]
-        public IActionResult Details(string type, string color, int id)
+        [Route("Shoes/{id}")]
+        public IActionResult Details(int id)
         {
             var shoe = shoes.FirstOrDefault(s => s.Id == id && s.Type == type && s.Color == color);
             if (shoe == null)
