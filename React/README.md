@@ -62,3 +62,31 @@ Besides Vite and Create React App, there are other tools and frameworks you can 
 *   **Next.js:** A popular and powerful React framework for building production-ready applications. It offers features like server-side rendering and static site generation.
 *   **Gatsby:** A static site generator that excels at creating fast, content-rich websites.
 *   **Astro:** A modern web framework designed for building content-focused websites with a strong emphasis on performance.
+
+## Troubleshooting
+
+### PowerShell Execution Policy
+
+If you encounter an error message like this on Windows:
+
+```
+npx : File C:\Program Files\nodejs\npx.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see 
+about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ npx create-react-app my-app
++ ~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+
+This is because the execution policy on your system is preventing `npx` from running. You can fix this by running the following command in PowerShell with administrative privileges:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser Unrestricted
+```
+
+### `npx` command not found
+
+If you have just installed Node.js and the `npx` command is not recognized, you may need to restart your terminal. Close all terminal windows, including the one integrated into Visual Studio Code, and then open a new terminal and try to create the app again.
+
+```

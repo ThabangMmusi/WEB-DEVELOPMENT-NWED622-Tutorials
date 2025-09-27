@@ -23,7 +23,11 @@ app.UseAuthorization();
 // Custom route for Shoes with subcategories
 app.MapControllerRoute(
     name: "shoes-details",
-    pattern: "Shoes/{type}/{color}/{id}",
+    pattern: "Shoes/{id}",
+    defaults: new { controller = "Shoes", action = "Details" });
+app.MapControllerRoute(
+    name: "customer-details",
+    pattern: "Costterms/{id}",
     defaults: new { controller = "Shoes", action = "Details" });
 
 app.MapControllerRoute(
